@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import com.deneb.newsapp.R
 import com.deneb.newsapp.core.functional.DialogCallback
 import com.deneb.newsapp.core.navigation.PopUpDelegator
@@ -35,7 +36,7 @@ abstract class BaseFragment: androidx.fragment.app.Fragment() {
 
     private fun progressStatus(viewStatus: Int) =
         with(activity) {
-            if (this is BaseActivity) this.progress.visibility = viewStatus
+            if (this is AppCompatActivity) this.progress.visibility = viewStatus
         }
 
     override fun onAttach(activity: Activity) {
